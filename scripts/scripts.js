@@ -8,8 +8,8 @@ You are encouraged to use the provided naming convention for ease of review.
 
 /****************** create variables ******************/
 /* create variables to hold the values for modelName and duration */
-let modelName = document.getElementById('model-text').innerHTML
-let duration = document.getElementById('duration-text').innerHTML
+let modelName = document.getElementById('model-text').innerHTML;
+let duration = document.getElementById('duration-text').innerHTML;
 // INSERT YOUR CODE HERE
 
 
@@ -29,13 +29,13 @@ let duration = document.getElementById('duration-text').innerHTML
 // INSERT YOUR CODE HERE
 
 function recalculate() {
-    const costLabel = document.getElementById("calculated-cost")
+    const costLabel = document.getElementById("calculated-cost");
 
     if (modelName === 'Model XYZ') {
-        costLabel.innerHTML = duration * 100
+        costLabel.innerHTML = duration * 100;
     }
     else if (modelName === 'Model CPRG') {
-        costLabel.innerHTML = duration * 213
+        costLabel.innerHTML = duration * 213;
     }
 }
 
@@ -55,19 +55,19 @@ function recalculate() {
     // modelButton.addEventListener("click", changeModel);
 
 // INSERT YOUR CODE HERE
-const modelButton = document.getElementById('model-button')
-modelButton.addEventListener("click", changeModel)
+const modelButton = document.getElementById('model-button');
+modelButton.addEventListener("click", changeModel);
 
 function changeModel() {
     if (modelName == 'Model XYZ') {
-        modelName = 'Model CPRG'
-        document.getElementById('model-text').innerHTML = modelName
+        modelName = 'Model CPRG';
+        document.getElementById('model-text').innerHTML = modelName;
     }
     else if (modelName == 'Model CPRG') {
-        modelName = 'Model XYZ'
-        document.getElementById('model-text').innerHTML = modelName
+        modelName = 'Model XYZ';
+        document.getElementById('model-text').innerHTML = modelName;
     }
-    recalculate()
+    recalculate();
 }
 
 
@@ -88,12 +88,12 @@ function changeModel() {
 
 // INSERT YOUR CODE HERE
 
-const changeDur = document.getElementById('duration-button')
-changeDur.addEventListener('click', changeDuration)
+const changeDur = document.getElementById('duration-button');
+changeDur.addEventListener('click', changeDuration);
 
 function changeDuration() {
-    const durationText = document.getElementById('duration-text')
-    duration = window.prompt('Enter a duration')
-    durationText.innerHTML = duration
-    recalculate()
+    const durationText = document.getElementById('duration-text');
+    duration = window.prompt('Enter a duration');
+    durationText.innerHTML = duration;
+    recalculate();
 }
